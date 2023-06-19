@@ -1,0 +1,47 @@
+Assignment Tasks 
+1)	Imagine you are on Refinement Metting , please write down the comments you will do to your PO about the User Story definition and the Acceptance Criterias he/she has written down.
+-	The user story only defines the user requirement to be able to search for books. It does not include details on how the text search has to be performed.
+-	AC 1 is very broad. It only indicates that the free text input has to be added to the page. It should be refined stating the characteristics, defining which search criteria will be available (for example, search for title, author, publisher, etc.)
+-	AC 2 is correct but this acceptance criteria should be split in several ACs for the different available types of search that will be allowed.
+2)	Please create the test cases for this User Story?
+T1:
+Step 1: Access the bookstore website.
+Expected: The screen displays a text free field.
+Step 2: Log in with a user with permissions.
+Expected: The user is correctly logged in.
+Step 3: Insert text in the field.
+Expected: The text free field allows inserting text.
+
+T2:
+Step 1: Access the bookstore website.
+Expected: The screen displays a text free field.
+Step 2: Log in with a user without permissions.
+Expected: The user is correctly logged in but is not allowed to introduce text in the field.
+
+T3:
+Preconditions: Access the bookstore website with a user with permissions.
+Step 1: In the free text field, inform “Harry Potter”
+Expected: The screen displays all the books that contain “Harry Potter” in their title.
+Step 2: In the free text field, inform “J. R. R. Tolkien”
+Expected: The screen displays all the books that have “J. R. R. Tolkien” as their author.
+Step 3: In the free text field, inform “O’Reilly Media”
+Expected: The screen displays all the books that have “O’Reilly Media” as their publisher.
+
+T4: 
+Preconditions: Access the bookstore website with a user with permissions.
+Step 1: In the free text field, inform “Brown”
+Expected: The screen displays all the books that contain “Brown” in their title, author or publisher name.
+
+3) Please can you automate the REST API Books endpoint? Consider that the search is not implemented on the backend/api, so frontend gets all the books and then filters them. 
+a. Current dataset should return 8 books, and should contain the “title” and the “author” so frontend can search them. 
+b. test Environment swagger api of /books: https://demoqa.com/swagger/#/BookStore/BookStoreV1BooksGet 
+
+4) Please can you automate the test case for Search input on the UI, it should verify that the search input is working by refreshing the output list of books. 
+a. test environment has been created in the following URL : https://demoqa.com/books 
+
+5) Free Automation exercise, please choose any other section of the book Store application: 
+a. Login page 
+b. Profile Page 
+c. Book details page 
+And automate the Testing of it. User testtest/Test123! Has been registered if you need it.
+
